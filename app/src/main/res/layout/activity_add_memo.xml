@@ -2,42 +2,42 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".AddMemoActivity">
 
-    <!-- メモのリストを表示するリストビュー -->
-    <ListView
-        android:id="@+id/listView"
+    <!-- メモ入力用のEditText -->
+    <EditText
+        android:id="@+id/memoInput"
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:padding="16dp"
-        app:layout_constraintBottom_toTopOf="@+id/addButton"
+        android:layout_height="wrap_content"
+        android:hint="Enter your memo"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintHorizontal_bias="0.5"
+        android:layout_margin="16dp" />
 
-    <!-- メモを追加するためのボタン -->
+    <!-- 保存ボタン -->
     <Button
-        android:id="@+id/addButton"
+        android:id="@+id/saveButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Add Memo"
-        app:layout_constraintBottom_toTopOf="@+id/shareButton"
+        android:text="Save"
+        app:layout_constraintTop_toBottomOf="@id/memoInput"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginBottom="16dp"/>
+        android:layout_marginTop="16dp"/>
 
-    <!-- メモを共有するためのボタン -->
+    <!-- キャンセルボタン -->
     <Button
-        android:id="@+id/shareButton"
+        android:id="@+id/cancelButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Share Memo"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="Cancel"
+        app:layout_constraintTop_toBottomOf="@id/saveButton"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginBottom="16dp"/>
+        android:layout_marginTop="16dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

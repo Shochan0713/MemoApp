@@ -21,6 +21,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <!-- AddMemoActivityの宣言 -->
+        <activity android:name=".AddMemoActivity" />
     </application>
 
 </manifest>
